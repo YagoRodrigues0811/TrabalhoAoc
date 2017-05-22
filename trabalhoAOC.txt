@@ -1,0 +1,3 @@
+Algoritmo que receba um número (1 < número <= 50000) e demonstre o primeiro número primo após a ele e o primeiro número primo antes dele.
+
+
