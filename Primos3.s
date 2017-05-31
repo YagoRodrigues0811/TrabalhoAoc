@@ -37,9 +37,10 @@ salto1:
     
     addi $t0, $zero, 0 # $t0 contador de números primos
     addi $t1, $zero, 1 # Total de números primos a mostrar
-    ciclo2:
 
-    li $v0, 4
+ciclo2:
+
+    li $v0, 4           #Remover
     la $a0, message1
     syscall
 
