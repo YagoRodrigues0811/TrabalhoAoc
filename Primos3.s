@@ -1,6 +1,8 @@
 .data
 enter: .asciiz "\n"
 message1 : .asciiz "Digite um número maior que 1 e menor ou igual a 50000\n"
+messageMaior : .asciiz "Primeiro primo maior: "
+messageMenor : .asciiz "\nPrimeiro primo menor: "  
 .text
 main:
     addi $sp, $sp, -4 # Reserva 1 posição na stack
@@ -15,6 +17,9 @@ main:
 
     li $v0, 5
     syscall
+    
+    ble $v0, 1, main
+    bgt $v0, 50000, main    
 
     add $t7, $v0, $zero  #$t2 Número de Início
     add $t2, $t7, $zero  #$t2 Número de Início
@@ -27,7 +32,7 @@ ciclo1:
     beq $v0,$zero, salto1 # Se não é primo vai para salto1
     addi $t0, $t0, 1 # Contador de números primos
     addi $v0, $zero, 4 # System call $a0=4 (imprime string enter)
-    la $a0, enter
+    la $a0, messageMaior
     syscall
     addi $v0, $zero, 1 # Syscall $a0=1, imprime inteiro(nº primo)
     addi $a0, $t2, 0 # $t2 é o nº primo a imprimir
@@ -39,24 +44,19 @@ salto1:
     addi $t1, $zero, 1 # Total de números primos a mostrar
 
 ciclo2:
-
-    li $v0, 4           #Remover
-    la $a0, message1
-    syscall
-
     sub $t7, $t7, $s6 # Número a verificar, começando em 1
     add $a0, $zero, $t7 # Copia $t2 para argumento $a0
     jal primo
     beq $v0,$zero, salto2 # Se não é primo vai para salto2
     addi $t0, $t0, 1 # Contador de números primos
     addi $v0, $zero, 4 # System call $a0=4 (imprime string enter)
-    la $a0, enter
+    la $a0, messageMenor
     syscall
     addi $v0, $zero, 1 # Syscall $a0=1, imprime inteiro(nº primo)
     addi $a0, $t7, 0 # $t2 é o nº primo a imprimir
     syscall
 salto2:
-    bne $t0, $t1, ciclo1 # Se o total de números primos < 100 vai p/ ciclo
+    bne $t0, $t1, ciclo2 # Se o total de números primos < 100 vai p/ ciclo
     lw $ra, 0($sp) # Re põe valor do $ra
     addi $sp, $sp, 4
     jr $ra
