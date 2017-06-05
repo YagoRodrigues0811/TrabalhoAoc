@@ -4,15 +4,41 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 </head>
-<body>1 - Explique Set de Instruções, com seus elementos.<br>
-2 – Explique a forma que uma instrução pode ser representada, de acordo com os tipos possíveis de processador.<br>
-3 – Explique tipo de dados e qual sua relevância.<br>
-4 – Explique os tipos de Operações possíveis em um computador.<br>
-5 – Explique as características dos processadores CISC.<br>
-6 – Explique as características dos processadores RISC.<br>
-7 - Explique as características dos processadores Híbridos CISC-RISC.<br>
-8 – Explique o banco de registradores dos processadores RISC e, o motivo de sua adoção.<br>
-9 – Explique Registradores de uso geral e de uso específico, dizendo, pro caso dos de uso específico, quais são e para que servem.<br>
+<body><h2> 1 - Explique Set de Instruções, com seus elementos.</h2>
+Set de Instruções é a coleção de instruções que são interpretadas pela CPU. Cada Instrução tem Quatro Elementos:<br>
+----OPCode - Especifica a operação a ser executada através de código binário;<br>
+----Source Operand Reference ("Referência de Operando Fonte") - A Operação pode envolver um ou mais operandos que são os inputs da operação;<br>
+----Result Operand Reference ("Referência ao Operando Destino") - A Operação pode produzir um resultado;<br>
+----Next Instruction Reference ("Referência da Próxima Instrução") - Indica à CPU onde fazer a busca da próxima instrução, quando a execução estiver
+ completa.<br>
+<h2> 2 - Explique a forma que uma instrução pode ser representada, de acordo com os tipos possíveis de processador.</h2>
+No processamento, a instrução é interpretada em bits e nas relações com os programadores ela é representada de modo simbólico.<br>
+<h2> 3 - Explique tipo de dados e qual sua relevância.</h2>
+Os tipos de dados são definições de valores e operações utilizadas para se armazenar determinado dado, ou sua flexão, em memória.<br>
+<h2> 4 - Explique os tipos de Operações possíveis em um computador.</h2>
+São 7 os tipos de operação:<br>
+----Data Transfer ("Transferência de Dados") - Operação de Movimentação de determinado dado de uma fonte para um destino.<br>
+----Arithmetic ("Aritmética") - Operações de Manipulação de Números.<br>
+----Logical ("Lógica") - Operações bit a bit e Operações Lógicas.<br>
+----Conversion ("Conversão") - Operações de conversão de sistemas de dados.<br>
+----Input/Output I/O ("Entrada e Saída") - Operações de Entrada e Saída de dados.<br>
+----Systems Control ("Controle do Sistema") - Operações para controle do sistema operacional em determinada ação.<br>
+----Transfer of Control ("Transferência de Controle") - Operações de Alternancia do que a de ser executado.<br> 
+<h2>5 - Explique as características dos processadores CISC.</h2>
+Os Processadores de Arquitetura CISC têm por caracterítica principal a presença de instruções complexas, mas a execução delas se torna mais lenta.<br>
+<h2>6 -  Explique as características dos processadores RISC.</h2>
+Suporta menos instruções, e com isso executa com mais rapidez o conjunto de instruções que são combinadas.<br>
+<h2>7 - Explique as características dos processadores Híbridos CISC-RISC.</h2>
+Nos Processadores Híbridos, o processador processa apenas instruções simples. Estas instruções internas, variam de processador para processador. Sobre estas instruções internas, temos um circuito decodificador, que converte as instruções complexas utilizadas pelos programas em várias instruções simples que podem ser entendidas pelo processador.<br>
+<h2>8 - Explique o banco de registradores dos processadores RISC e, o motivo de sua adoção.</h2>
+Um banco de registradores é um componente digital composto por um conjunto de registradores, em sistema de janelas, que podem ser acessados de forma organizada. A sua adoção se dá pela maior velocidade de acesso comparado à memória cache e à memória principal.<br>
+<h2>9 - Explique Registradores de uso geral e de uso específico, dizendo, pro caso dos de uso específico, quais são e para que servem.</h2>
+Os registradores de uso geral são usados para armazenar dados da execução do programa, como os valores que serão operados e o resultado das operações.
+Os registradores de uso específico guardam informações especiais, como por exemplo:<br>
+Program Counter: Contador de Programa;<br>
+Instruction Decoding Register: Registrador de Decodificação de Instrução;<br>
+Memory Address Register: Registrador de Endereço de Memória;<br>
+Memory Buffer Register: Registrador de Buffer de Memória.<br>
 10 – Explique, utilizando as características do ciclo de execução de instrução, Pipeline.<br>
 11 – Explique os tipos de tratamento de saltos em Pipelines.<br>
 12 – Explique Superpipeline.<br>
