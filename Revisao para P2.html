@@ -35,29 +35,29 @@ Um banco de registradores é um componente digital composto por um conjunto de re
 <h2>9 - Explique Registradores de uso geral e de uso específico, dizendo, pro caso dos de uso específico, quais são e para que servem.</h2>
 Os registradores de uso geral são usados para armazenar dados da execução do programa, como os valores que serão operados e o resultado das operações.
 Os registradores de uso específico guardam informações especiais, como por exemplo:<br>
-Program Counter: Contador de Programa;<br>
-Instruction Decoding Register: Registrador de Decodificação de Instrução;<br>
-Memory Address Register: Registrador de Endereço de Memória;<br>
-Memory Buffer Register: Registrador de Buffer de Memória.<br>
+-Program Counter: Contador de Programa;<br>
+-Instruction Decoding Register: Registrador de Decodificação de Instrução;<br>
+-Memory Address Register: Registrador de Endereço de Memória;<br>
+-Memory Buffer Register: Registrador de Buffer de Memória.<br>
 <h2>10 - Explique, utilizando as características do ciclo de execução de instrução, Pipeline.</h2>
 Um Ciclo de Execução de instruções é dividido em estágios, estes são:<br>
-Busca da Instrução<br>
-Decodificação da Instrução<br>
-Busca de Operandos<br>
-Calculo de Operandos<br>
-Execução da Instrução<br>
-Escrita de Resultados<br>
+-Busca da Instrução<br>
+-Decodificação da Instrução<br>
+-Busca de Operandos<br>
+-Calculo de Operandos<br>
+-Execução da Instrução<br>
+-Escrita de Resultados<br>
 Essas etapas podem ser executadas paralelamente, por exemplo, quando uma busca de instrução é realizada e a instrução vai para a etapa de decodificação, outra busca já pode ser realizada, e assim por diante.<br>
 <h2>11 - Explique os tipos de tratamento de saltos em Pipelines.</h2>
-Multiple Streams - trata a branch em multiplos pipelines, mas multiplos pipelines tendem a causar um delay no acesso à memória<br>
-Prefetch Branch Target - instrução alvo da Branch é buscada quando reconhecida<br>
-Loop Buffer - Pequena memória que contém as instruções buscadas recentementes, se uma branch for acontecer o hardware busca a instrução no buffer.<br>
-Branch Prediction:<br>
-- Predict Never Taken - Static - Nunca Espera uma branch e sempre busca as instruções em sequência<br>
-- Predict Always Taken - Static - Sempre espera uma branch e sempre busca o alvo da branch<br>
-- Predict by Opcode - Static - Decisão baseada no opcode da instrução de branch.<br>
-- Taken/Not taken switch - Dynamic - Baseado no que já aconteceu, associa um ou mais bits a cada tipo de branch para guardar se deu ou não salto da última vez. Eficiente para loop.<br>
-- Delayed Branch - não desvia até que seja necessário. rearranja as instruções.<br>
+-Multiple Streams - trata a branch em multiplos pipelines, mas multiplos pipelines tendem a causar um delay no acesso à memória<br>
+-Prefetch Branch Target - instrução alvo da Branch é buscada quando reconhecida<br>
+-Loop Buffer - Pequena memória que contém as instruções buscadas recentementes, se uma branch for acontecer o hardware busca a instrução no buffer.<br>
+-Branch Prediction:<br>
+-- Predict Never Taken - Static - Nunca Espera uma branch e sempre busca as instruções em sequência<br>
+-- Predict Always Taken - Static - Sempre espera uma branch e sempre busca o alvo da branch<br>
+-- Predict by Opcode - Static - Decisão baseada no opcode da instrução de branch.<br>
+-- Taken/Not taken switch - Dynamic - Baseado no que já aconteceu, associa um ou mais bits a cada tipo de branch para guardar se deu ou não salto da última vez. Eficiente para loop.<br>
+-- Delayed Branch - Dynamic - não desvia até que seja necessário. rearranja as instruções.<br>
 <h2>12 - Explique Superpipeline.</h2>
 13 – Explique Superescalar.<br>
 14 – Explique as limitações de um sistema Superescalar.<br>
