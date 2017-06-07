@@ -1,0 +1,50 @@
+﻿1 - Explique Set de Instruções, com seus elementos.
+Set de instruções é uma coleção de instruções a serem executadas pelo processador, e tem elementos de instrução os seguintes:
+OPCode – Código da instrução a ser realizada;
+Operando fonte – valores para realização da operação;
+Operando de resultado – resultado da operação
+referência para a próxima instrução
+2 - Explique a forma que uma instrução pode ser representada, de acordo com os tipos possíveis de processador.
+Uma instrução é executada em forma de bits, mas normalmente é representada de forma simbólica, como linguagens de programação.
+3 - Explique tipo de dados e qual sua relevância.
+Os tipos de dados são definições de valores e operações a serem realizadas com esses valores para serem armazenados em memória.
+4 - Explique os tipos de Operações possíveis em um computador.
+Movimentação de dados – operações para transferir valores entre os registradores;
+Aritmética – manipulação de números;
+Lógica – operações para montagem de estruturas de decisão sobre os dados;
+Controle do Sistema – operações para controle do sistema operacional em determinadas funções;
+Transferência de Controle – operações para alternância do que há de ser executado.
+5 - Explique as características dos processadores CISC.
+Os processadores CISC são caracterizados pela maior complexidade das instruções suportada, maior demora no processamento e menor número de linha de código no desenvolvimento para ele.
+6 - Explique as características dos processadores RISC.
+Os processadores RISC são caracterizados por apenas suportar instruções simples, desempenho melhor e maior número de linhas de código ao desenvolver para ele.
+7 - Explique as características dos processadores Híbridos CISC-RISC.
+Recebe instruções complexas, decodifica-as para instruções simples e as processa como instruções simples. Possui o desempenho de RISC e a facilidade de desenvolvimento do CISC.
+8 - Explique o banco de registradores dos processadores RISC e, o motivo de sua adoção.
+O banco de registradores é um conjunto de registradores dispostos em sistema de janelas, que são adotados por possuírem acesso mais rápido do que o acesso ao cache ou acesso à memória principal.
+
+9 - Explique Registradores de uso geral e de uso específico, dizendo, pro caso dos de uso específico, quais são e para que servem.
+Os registradores de uso geral são utilizados para o armazenamento dos dados que serão utilizados para execução de determinada instrução.
+Os específicos são de uso do processador para realização de determinadas operações, como os seguintes:
+-Contador de Programa
+-Decodificador de instruções
+-Buffer de Memória
+-Endereço de Memória
+10 - Explique, utilizando as características do ciclo de execução de instrução, Pipeline.
+Um ciclo de execução de uma instrução é dividido nas seguintes etapas:
+Busca da instrução
+Decodificação da instrução
+Busca de Operandos
+Cálculo de Operandos
+Execução da instrução
+Exibição dos resultados
+Quando se tem mais de uma instrução, após uma etapa ser concluída, a mesma etapa em uma próxima instrução pode começar a ser executada.
+
+11 - Explique os tipos de tratamento de saltos em Pipelines.
+
+12 - Explique Superpipeline.
+13 - Explique Superescalar.
+14 - Explique as limitações de um sistema Superescalar.
+15 - Explique as possibilidades para Multiprocessadores Simétricos.
+16 - Explique a Lei de Pollack.
+

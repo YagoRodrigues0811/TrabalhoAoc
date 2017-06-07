@@ -32,6 +32,10 @@ Suporta menos instruções, e com isso executa com mais rapidez o conjunto de inst
 Nos Processadores Híbridos, o processador processa apenas instruções simples. Estas instruções internas, variam de processador para processador. Sobre estas instruções internas, temos um circuito decodificador, que converte as instruções complexas utilizadas pelos programas em várias instruções simples que podem ser entendidas pelo processador.<br>
 <h2>8 - Explique o banco de registradores dos processadores RISC e, o motivo de sua adoção.</h2>
 Um banco de registradores é um componente digital composto por um conjunto de registradores, em sistema de janelas, que podem ser acessados de forma organizada. A sua adoção se dá pela maior velocidade de acesso comparado à memória cache e à memória principal.<br>
+Uma janela corresponde à execução de uma instrução e é composta por:<br>
+-Registradores de parâmetros;<br>
+-Registradores locais;<br>
+-Registradores temporários.<br>
 <h2>9 - Explique Registradores de uso geral e de uso específico, dizendo, pro caso dos de uso específico, quais são e para que servem.</h2>
 Os registradores de uso geral são usados para armazenar dados da execução do programa, como os valores que serão operados e o resultado das operações.
 Os registradores de uso específico guardam informações especiais, como por exemplo:<br>
@@ -66,19 +70,19 @@ clock.<br>
 Superescalar é quando se coloca a situação de que as instruções são executadas em pipelines paralelos
 <h2>14 - Explique as limitações de um sistema Superescalar.</h2>
 As limitações do sistema superescalar são relacionadas à dependência entre instruções, por exemplo:<br>
--Dependência de dados verdadeira - uma instrução depende de determinado dado proveniente de outra instrução, as duas não podem ser executadas ao mesmo tempo
--Dependência de desvio - uma instrução posterior a uma instrução de desvio necessita esperar o término da anterior para ocorrer
--Conflito de recurso - ocorre quando duas instruçções dependem de um mesmo recurso (hardware) para serem executadadas
--Dependência de saída - ocorre quando mais de uma instrução contribui para determinada saída de dados, e a ordem de execução é fundamental para se chegar na saída esperada
--Antidependência - inversão da dependência de dados, se caracteriza pela manipulação de um registro posteriormente à sua utilização, caso a manipulação ocorra primeiro o resultado não será o esperado. 
-<h2>15 – Explique as possibilidades para Multiprocessadores Simétricos.</h2>
-- Melhor Desempenho
-- Disponibilidade
-- Crescimento Icremental
-- Personalização de fornecimento
-<h2>16 – Explique a Lei de Pollack.</h2>
+-Dependência de dados verdadeira - uma instrução depende de determinado dado proveniente de outra instrução, as duas não podem ser executadas ao mesmo tempo<br>
+-Dependência de desvio - uma instrução posterior a uma instrução de desvio necessita esperar o término da anterior para ocorrer<br>
+-Conflito de recurso - ocorre quando duas instruçções dependem de um mesmo recurso (hardware) para serem executadadas<br>
+-Dependência de saída - ocorre quando mais de uma instrução contribui para determinada saída de dados, e a ordem de execução é fundamental para se chegar na saída esperada<br>
+-Antidependência - inversão da dependência de dados, se caracteriza pela manipulação de um registro posteriormente à sua utilização, caso a manipulação ocorra primeiro o resultado não será o esperado.<br> 
+<h2>15 - Explique as possibilidades para Multiprocessadores Simétricos.</h2>
+- Melhor Desempenho<br>
+- Disponibilidade<br>
+- Crescimento Icremental<br>
+- Personalização de fornecimento<br>
+<h2>16 - Explique a Lei de Pollack.</h2>
 O aumento do desempenho devido aos avanços da microarquitetura é aproximadamente proporcional à [raiz quadrada] do aumento da complexidade
-<h2>17 – Explique a organização Multicore para os Principais Processadores.</h2>
+<h2>17 - Explique a organização Multicore para os Principais Processadores.</h2>
 Determinado número de núcleos > Número de níveis de cache > Quantidade de cache compartilhado<br>
 ARM11 - cache dedicado no primeiro nível<br>
 AMD Opteron - cache dedicado até o segundo nível<br>
