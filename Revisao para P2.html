@@ -59,9 +59,29 @@ Essas etapas podem ser executadas paralelamente, por exemplo, quando uma busca d
 -- Taken/Not taken switch - Dynamic - Baseado no que já aconteceu, associa um ou mais bits a cada tipo de branch para guardar se deu ou não salto da última vez. Eficiente para loop.<br>
 -- Delayed Branch - Dynamic - não desvia até que seja necessário. rearranja as instruções.<br>
 <h2>12 - Explique Superpipeline.</h2>
-13 – Explique Superescalar.<br>
-14 – Explique as limitações de um sistema Superescalar.<br>
-15 – Explique as possibilidades para Multiprocessadores Simétricos.<br>
-16 – Explique a Lei de Pollack.<br>
-17 – Explique a organização Multicore para os Principais Processadores.<br>
+Superpipeline é o conceito que trata de que as atividades inclusas num ciclo de instrução demoram menos do que meio ciclo 
+de clock para ocorrerem, assim a administração do paralelismo, não necessariamente necessita ser baseada em um ciclo de 
+clock.<br>
+<h2>13 - Explique Superescalar.</h2>
+Superescalar é quando se coloca a situação de que as instruções são executadas em pipelines paralelos
+<h2>14 - Explique as limitações de um sistema Superescalar.</h2>
+As limitações do sistema superescalar são relacionadas à dependência entre instruções, por exemplo:<br>
+-Dependência de dados verdadeira - uma instrução depende de determinado dado proveniente de outra instrução, as duas não podem ser executadas ao mesmo tempo
+-Dependência de desvio - uma instrução posterior a uma instrução de desvio necessita esperar o término da anterior para ocorrer
+-Conflito de recurso - ocorre quando duas instruçções dependem de um mesmo recurso (hardware) para serem executadadas
+-Dependência de saída - ocorre quando mais de uma instrução contribui para determinada saída de dados, e a ordem de execução é fundamental para se chegar na saída esperada
+-Antidependência - inversão da dependência de dados, se caracteriza pela manipulação de um registro posteriormente à sua utilização, caso a manipulação ocorra primeiro o resultado não será o esperado. 
+<h2>15 – Explique as possibilidades para Multiprocessadores Simétricos.</h2>
+- Melhor Desempenho
+- Disponibilidade
+- Crescimento Icremental
+- Personalização de fornecimento
+<h2>16 – Explique a Lei de Pollack.</h2>
+O aumento do desempenho devido aos avanços da microarquitetura é aproximadamente proporcional à [raiz quadrada] do aumento da complexidade
+<h2>17 – Explique a organização Multicore para os Principais Processadores.</h2>
+Determinado número de núcleos > Número de níveis de cache > Quantidade de cache compartilhado<br>
+ARM11 - cache dedicado no primeiro nível<br>
+AMD Opteron - cache dedicado até o segundo nível<br>
+Core Duo - Segundo nível de cache compartilhado<br>
+Core I7 - Terceiro nível de cache compartilhado<br>
 </body></html>
